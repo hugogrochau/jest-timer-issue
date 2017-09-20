@@ -1,10 +1,6 @@
 import React from 'react';
 
 export default class TimerComponent extends React.Component {
-  state = {
-    on: false
-  }
-
   runTimer = () => {
     setTimeout(() => {
       this.props.foo();
