@@ -3,7 +3,9 @@ import React from 'react';
 export default class TimerComponent extends React.Component {
   runTimer = () => {
     setTimeout(() => {
-      this.props.foo();
+      if (this.props.throwError) {
+        throw new Error('error');
+      }
     }, 1000);
   }
 

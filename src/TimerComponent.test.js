@@ -6,9 +6,9 @@ import TimerComponent from './TimerComponent';
 jest.useFakeTimers();
 
 describe('TimerComponent', () => {
-  it('1. runTimer without foo prop', () => {
+  it('1. With error', () => {
     const wrapper = shallow(
-      <TimerComponent />
+      <TimerComponent throwError />
     );
 
     wrapper.instance().runTimer();
@@ -16,9 +16,9 @@ describe('TimerComponent', () => {
     expect(true).toBe(true);
   });
 
-  it('2. runTimer with foo prop', () => {
+  it('2. Without error', () => {
     const wrapper = shallow(
-      <TimerComponent foo={f => f} />
+      <TimerComponent />
     );
 
     wrapper.instance().runTimer();
