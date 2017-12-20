@@ -18,7 +18,7 @@ describe('TimerComponent', () => {
 
   it('2. Without error', () => {
     const wrapper = shallow(
-      <TimerComponent />
+      <TimerComponent throwError={false} />
     );
 
     wrapper.instance().runTimer();
